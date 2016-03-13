@@ -1,0 +1,5 @@
+[alias]
+    sampler = //sampler:sampler
+
+[cxx]
+    gtest_dep = //third-party/cxx/google-test:google-test
