@@ -1,0 +1,10 @@
+cxx_binary(
+ name = 'sampler',
+ srcs = [
+    'main.cpp',
+ ],
+ deps = [
+    '//libEntropy:entropy',
+ ],
+ compiler_flags = [ '-std=c++11', '-stdlib=libc++', '-Wall' ],
+)
