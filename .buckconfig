@@ -2,4 +2,4 @@
     sampler = //sampler:sampler
 
 [cxx]
-    gtest_dep = //third-party/cxx/google-test:google-test
+    gtest_dep = //third-party/cxx/googletest:googletest

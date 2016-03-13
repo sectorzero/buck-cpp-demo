@@ -1,0 +1,13 @@
+cxx_library(
+    name = 'entropy',
+    srcs = [
+        'Sampler.cpp',
+        'RandomUtil.cpp'
+    ],
+    exported_headers = [
+        'Sampler.h',
+        'RandomUtil.h'
+    ],
+    visibility = ['PUBLIC'],
+    compiler_flags = [ '-std=c++11', '-stdlib=libc++', '-Wall' ],
+)

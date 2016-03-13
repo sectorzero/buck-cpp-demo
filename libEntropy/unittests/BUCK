@@ -1,0 +1,10 @@
+cxx_test(
+  name = 'entropy-test',
+  srcs = [
+    'SamplerTest.cpp',
+  ],
+  deps = [
+    '//libEntropy:entropy',
+  ],
+  compiler_flags = [ '-std=c++11', '-stdlib=libc++', '-Wall' ],
+)
