@@ -19,6 +19,26 @@ cxx_library (
     ],
 )
 
+cxx_library (
+    name = 'googlemock',
+    srcs = glob(['.repo/googletest/googlemock/src/**/*.cc'], excludes=['.repo/googletest/googlemock/src/gmock-all.cc']),
+    exported_preprocessor_flags = [
+        '-DTEST_USE_OWN_TR1_TUPLE=1',
+    ],
+    header_namespace = '',
+    exported_headers = subdir_glob([
+        ('.repo/googletest/googlemock', 'src/**/*.h'),
+        ('.repo/googletest/googlemock/include', '**/*.h'),
+    ]),
+    deps = [
+        ':pthread',
+        ':googletest',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
 prebuilt_cxx_library(
     name = 'pthread',
     header_only = True,

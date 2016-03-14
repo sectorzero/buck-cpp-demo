@@ -1,0 +1,12 @@
+cxx_library (
+    name = 'turtle',
+    srcs = [
+        'Painter.cpp',
+    ],
+    exported_headers = [
+        'Turtle.h',
+        'Painter.h',
+    ],
+    visibility = ['PUBLIC'],
+    compiler_flags = [ '-std=c++11', '-stdlib=libc++', '-Wall' ],
+)

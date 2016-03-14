@@ -1,0 +1,11 @@
+cxx_test (
+    name = 'turtle-test',
+    srcs = [
+        'PainterTest.cpp',
+    ],
+    deps = [
+        '//libTurtle:turtle',
+        '//third-party/cxx/googletest:googlemock',
+    ],
+    compiler_flags = [ '-std=c++11', '-stdlib=libc++', '-Wall' ],
+)
