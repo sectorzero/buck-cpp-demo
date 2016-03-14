@@ -1,15 +1,15 @@
 # http://stackoverflow.com/questions/29787623/how-to-specify-the-gtest-dependency-for-a-cxx-test-target-when-using-buck
 
-cxx_library(
+cxx_library (
     name = 'googletest',
-    srcs = glob(['.repo/googletest/src/**/*.cc'], excludes=['.repo/googletest/src/gtest-all.cc']),
+    srcs = glob(['.repo/googletest/googletest/src/**/*.cc'], excludes=['.repo/googletest/googletest/src/gtest-all.cc']),
     exported_preprocessor_flags = [
         '-DTEST_USE_OWN_TR1_TUPLE=1',
     ],
     header_namespace = '',
     exported_headers = subdir_glob([
-        ('.repo/googletest', 'src/**/*.h'),
-        ('.repo/googletest/include', '**/*.h'),
+        ('.repo/googletest/googletest', 'src/**/*.h'),
+        ('.repo/googletest/googletest/include', '**/*.h'),
     ]),
     deps = [
         ':pthread',
@@ -17,7 +17,7 @@ cxx_library(
     visibility = [
         'PUBLIC',
     ],
- )
+)
 
 prebuilt_cxx_library(
     name = 'pthread',

@@ -1,0 +1,3 @@
+[submodule "third-party/cxx/googletest/.repo/googletest"]
+	path = third-party/cxx/googletest/.repo/googletest
+	url = https://github.com/google/googletest
